@@ -2124,50 +2124,7 @@
         </div>
       </div>
 
-      <!-- ── AI Chat ── -->
-      <div class="chat-section">
-        <div class="chat-header-row">
-          <div>
-            <p class="chat-eyebrow">Ask Virnel's AI</p>
-            <h3 class="chat-heading">Have questions? Ask away.</h3>
-            <p class="chat-sub">Powered by Gemini. Ask about my experience, process, availability, or anything else.</p>
-          </div>
-        </div>
-
-        <!-- Chat window -->
-        <div class="chat-window" id="chat-window">
-          <div class="chat-welcome">
-            <div class="chat-avatar">V</div>
-            <div class="chat-bubble chat-bubble-ai">
-              <p>Hi there! I'm Virnel's AI assistant. Ask me anything about her design experience, process, case studies, or how to work with her. 👋</p>
-              <div class="bubble-suggestions">
-                <button class="suggestion-chip" onclick="sendSuggestion(this)">What's your design process?</button>
-                <button class="suggestion-chip" onclick="sendSuggestion(this)">What industries have you worked in?</button>
-                <button class="suggestion-chip" onclick="sendSuggestion(this)">Are you open to work?</button>
-              </div>
-            </div>
-          </div>
-          <div id="chat-messages"></div>
-        </div>
-
-        <!-- Input -->
-        <div class="chat-input-wrap">
-          <textarea
-            id="chat-input"
-            class="chat-input"
-            placeholder="Ask me anything about Virnel..."
-            rows="1"
-            onkeydown="handleChatKey(event)"
-            oninput="autoResize(this)"
-          ></textarea>
-          <button class="chat-send-btn" id="send-btn" onclick="sendMessage()">
-            <span id="send-label">Send</span>
-            <span id="send-spinner" class="spinner" style="display:none"></span>
-          </button>
-        </div>
-      </div>
-
-    </div>
+    
   </section>
 
   <!-- BACK TO TOP -->
@@ -2280,7 +2237,7 @@
   // NOTE: This key will be visible to anyone viewing the page source on GitHub Pages.
   // Use a free-tier / restricted key and monitor usage in Google AI Studio.
   var GEMINI_CONFIG = {
-    apiKey: 'AQ.Ab8RN6JzLLFG-NR4Kqgq4JvGCVlJfdk9B-i23PZvxn_0gzKizA',
+    apiKey: '',
     model: 'gemini-2.5-flash'
   };
 
