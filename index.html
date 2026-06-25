@@ -18,7 +18,6 @@
 <link rel="apple-touch-icon" sizes="144x144" href="images/favicon-144x144.png">
 <link rel="apple-touch-icon" sizes="152x152" href="images/favicon-152x152.png">
 <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180x180.png">
-
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
@@ -40,6 +39,7 @@
 <link rel="shortcut icon" href="/portfolio/images/favicon.ico?v=2">
  
 <meta name="theme-color" content="#ffffff">
+
 
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -257,7 +257,7 @@
 
   /* ── STICKY NAVBAR (hidden, fades in after hero) ── */
   .site-header {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     background: rgba(255,255,255,0.88); backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
     padding: 1rem 3rem;
@@ -512,7 +512,7 @@
 
   /* ── ABOUT SECTION ── */
   .about-section {
-    position: relative; z-index: 1; padding: 6rem 2rem;
+    position: relative; padding: 6rem 2rem;
     border-top: 1px solid var(--border);
   }
   .about-wrap { max-width: 1100px; margin: 0 auto; }
@@ -908,7 +908,6 @@
     margin: 0 auto;
     padding: 6rem 2rem 6rem;
     border-top: 1px solid rgba(26,26,26,0.1);
-    position: relative; z-index: 1;
     background: #ffffff;
   }
   .creative-section-inner {
@@ -1265,7 +1264,7 @@
             <div class="carousel-slide" style="position: relative; overflow: hidden;">
             <img src="images/chh/chh-15.webp" alt="Description of image" style="width: 100%; height: 100%; object-fit: cover; display: block;">
             </div>
-<!---
+
             <div class="carousel-slide" style="position: relative; overflow: hidden;">
             <img src="images/chh/chh-16.webp" alt="Description of image" style="width: 100%; height: 100%; object-fit: cover; display: block;">
             </div>
@@ -1302,8 +1301,6 @@
             <img src="images/chh/chh-24.webp" alt="Description of image" style="width: 100%; height: 100%; object-fit: cover; display: block;">
             </div>
 
-            --->
-           
           </div>
           <button class="carousel-btn prev" onclick="moveCarousel(0,-1)">&#8592;</button>
           <button class="carousel-btn next" onclick="moveCarousel(0,1)">&#8594;</button>
@@ -2139,7 +2136,51 @@
         </div>
       </div>
 
-    
+      <!-- ── AI Chat (temporarily hidden — re-enable when new API is ready) ── -->
+      <!-- To restore: remove the "display:none" style below -->
+      <div class="chat-section" style="display:none">
+        <div class="chat-header-row">
+          <div>
+            <p class="chat-eyebrow">Ask Virnel's AI</p>
+            <h3 class="chat-heading">Have questions? Ask away.</h3>
+            <p class="chat-sub">Powered by Gemini. Ask about my experience, process, availability, or anything else.</p>
+          </div>
+        </div>
+
+        <!-- Chat window -->
+        <div class="chat-window" id="chat-window">
+          <div class="chat-welcome">
+            <div class="chat-avatar">V</div>
+            <div class="chat-bubble chat-bubble-ai">
+              <p>Hi there! I'm Virnel's AI assistant. Ask me anything about her design experience, process, case studies, or how to work with her. 👋</p>
+              <div class="bubble-suggestions">
+                <button class="suggestion-chip" onclick="sendSuggestion(this)">What's your design process?</button>
+                <button class="suggestion-chip" onclick="sendSuggestion(this)">What industries have you worked in?</button>
+                <button class="suggestion-chip" onclick="sendSuggestion(this)">Are you open to work?</button>
+              </div>
+            </div>
+          </div>
+          <div id="chat-messages"></div>
+        </div>
+
+        <!-- Input -->
+        <div class="chat-input-wrap">
+          <textarea
+            id="chat-input"
+            class="chat-input"
+            placeholder="Ask me anything about Virnel..."
+            rows="1"
+            onkeydown="handleChatKey(event)"
+            oninput="autoResize(this)"
+          ></textarea>
+          <button class="chat-send-btn" id="send-btn" onclick="sendMessage()">
+            <span id="send-label">Send</span>
+            <span id="send-spinner" class="spinner" style="display:none"></span>
+          </button>
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <!-- BACK TO TOP -->
@@ -2196,8 +2237,8 @@
   // ── Carousels ──
   var carouselState = [{idx:0},{idx:0},{idx:0},{idx:0},{idx:0},{idx:0},{idx:0}];
   var SLIDES = {
-    0: 15, // Tab 0 (Chong Hua) — main carousel
-    1: 15, // Tab 1 (MAPS)
+    0: 24, // Tab 0 (Chong Hua) — main carousel
+    1: 20, // Tab 1 (MAPS)
     2: 11, // Tab 2 (Globe Fiber)
     3: 5,  // Chong Hua extra slideshow A — update count to match your actual slides
     4: 5,  // Chong Hua extra slideshow B — update count to match your actual slides
@@ -2252,7 +2293,7 @@
   // NOTE: This key will be visible to anyone viewing the page source on GitHub Pages.
   // Use a free-tier / restricted key and monitor usage in Google AI Studio.
   var GEMINI_CONFIG = {
-    apiKey: '',
+    apiKey: 'PASTE_YOUR_NEW_API_KEY_HERE',
     model: 'gemini-2.5-flash'
   };
 
