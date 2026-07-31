@@ -1767,41 +1767,6 @@
 
       </div>
 
-      <div class="process-stage">
-        
-          <div>
-            <h3 class="stage-title">🧭 Designing for Role, Not for Feature</h3>
-            <br>
-            <p class="stage-body">With research, beta findings, and stakeholder directives in hand, I led the full IA-through-prototype pipeline across all three user roles.</p>
-            <br>
-            <br>
-            <p class="stage-body"><strong>Key design decisions:</strong></p>
-            <br>
-            <p class="stage-body">&bull; <strong>Role-based navigation architecture</strong> — Instructors get a horizontal 6-tab bar (VP Progress, Test Scores, Learning Attitude, Makeup Sessions, Evaluation, Performance Prep) for quick student data switching; Directors get a bottom tab navigation tuned to approval workflows; HQ Operators get three tab groups — Management, Performance, and Monitoring — plus bottom navigation for broader area access</p>
-            <br>
-            <p class="stage-body">&bull; <strong>Diagnostic dashboard, not data entry table</strong> — The core paradigm shift from the beta analysis. The student view was redesigned from an alphabetical list to a problem-first display: Normal / Needs Attention / Critical status overview at the top, with quick filters by Homework / Progress / Test issues, and student cards showing progress bars, trend indicators (↑ → ↓), and last-updated timestamps. Time to identify a problem student: under 30 seconds versus 10+ minutes in the current system</p>
-            <br>
-            <p class="stage-body">&bull; <strong>VP system transparency</strong> — Real-time running VP counters, visible Book → Unit → Topic hierarchy, and inline breakdowns showing how learning group factors (HN, AC, ST, RS) affect the final calculation</p>
-            <br>
-            <p class="stage-body">&bull; <strong>Bilingual Korean/English interface</strong> — A critical-priority finding from beta testing. Korean was deprioritized in the MVP, creating daily cognitive friction for every user. V2 introduces bilingual display patterns (e.g., AC - Achieve / 성취) across dropdowns and labels, Korean-primary buttons and actions, and fully Korean parent-facing monthly reports. English is the design-first language with Korean translation as the immediate next phase</p>
-            <br>
-            <p class="stage-body">&bull; <strong>Edit and delete throughout</strong> — Beta testing found teachers were afraid to enter data incorrectly because mistakes required admin intervention to fix. V2 enables inline edit and delete with confirmation dialogs, session-level undo, and an audit log visible to Directors for transparency</p>
-            <br>
-            <p class="stage-body">&bull; <strong>3-level homework input</strong> — Replacing the binary checkbox (done / not done) with a three-state radio system: Complete (≥70%), Partial (30–70%), and Incomplete (<30% — the default). Color-coded green/yellow/red. Auto-saves on selection with no submit button required. Estimated 75% reduction in homework update time </p>
-            <br>
-            <p class="stage-body">&bull; <strong>Student search and batch operations</strong> — Type-ahead search with fuzzy matching, filter by grade and group, and recent students shortcut — replacing the scroll-through-100-names workflow that beta users cited as a daily friction point. Batch test score entry for entering one test across multiple students simultaneously</p>
-            <br>
-            <p class="stage-body">&bull; <strong>Icons over text wherever possible</strong> — Per PM direction, reducing localization burden and improving scannability across both language contexts</p>
-            <br>
-            <p class="stage-body">&bull; <strong>Modular for HEMS integration</strong> — Since MAPS will eventually become a single "Progress Tracking" tab within HEMS, every component — tabs, data tables, student cards — was built to fold cleanly into the broader HEMS system without major rework</p>
-            <br>
-            <br>
-          </div>
-        
-        
-      </div>
-
-
     <div class="process-stage">
       <div class="process-stage-grid">
         <div>
@@ -1914,6 +1879,100 @@
 
         </div>
       
+      </div>
+    </div>
+
+
+      <div class="process-stage">
+        <div class="process-stage-grid">
+          <div>
+            <h3 class="stage-title">🧭 Key Design Decisions</h3>
+            <br>
+            <p class="stage-body">&bull; <strong>Role-based navigation architecture</strong> — Instructors get a horizontal 6-tab bar for quick student data switching; Directors get bottom tab navigation tuned to approval workflows; HQ Operators get three tab groups (Management, Performance, Monitoring) plus bottom navigation for broader access</p>
+            <br>
+            <p class="stage-body">&bull; <strong>Add Learning Plan redesign</strong> — Consolidated the multi-popup flow into one modal (Insert Book / Insert Manual Module tabs) feeding a single draggable Schedule Timeline, with inline status/VP/type indicators, target-vs-actual VP per month, live totals during creation, and inline governance guardrails (Pending Approval banner, locked future modules)</p>
+            <br>
+            <p class="stage-body">&bull; <strong>Diagnostic dashboard, not data entry table</strong> — Redesigned from an alphabetical list to a problem-first view: Normal / Needs Attention / Critical status overview, quick filters by Homework / Progress / Test, and student cards with progress bars and trend indicators — cutting problem-student identification from 10+ minutes to under 30 seconds</p>
+            <br>
+            <p class="stage-body">&bull; <strong>VP system transparency</strong> — Real-time running VP counters, visible Book → Unit → Topic hierarchy, and inline breakdowns of how learning group factors (HN, AC, ST, RS) affect the final calculation</p>
+            <br>
+            <p class="stage-body">&bull; <strong>Bilingual Korean/English interface</strong> — English design-first, Korean translation next phase</p>
+            <br>
+            <p class="stage-body">&bull; <strong>Frictionless data entry</strong> — Inline edit/delete with confirmation dialogs, session-level undo, and a Director-visible audit log (replacing admin-only fixes); homework input moved from a binary checkbox to a 3-state system (Complete/Partial/Incomplete, color-coded, auto-save) — ~75% faster homework updates</p>
+            <br>
+            <p class="stage-body">&bull; <strong>Student search and batch operations</strong> — Type-ahead fuzzy search, grade/group filters, and recent-students shortcut, plus batch test score entry across multiple students at once</p>
+            <br>
+            <p class="stage-body">&bull; <strong>Modular for HEMS integration</strong> — Every component built to fold into HEMS as a single "Progress Tracking" tab without major rework</p>
+            <br>
+            <br>
+          </div>
+
+          <div>
+            <div class="img-placeholder">
+              <img src="images/maps/key-design-1.png" alt="Description of image" style="height: 100%; width: 100%; object-fit: contain; display: block;">
+            </div>
+            <br>
+            <div class="img-placeholder">
+              <img src="images/maps/key-design-2.png" alt="Description of image" style="height: 100%; width: 100%; object-fit: contain; display: block;">
+            </div>
+            <br>
+            <div class="img-placeholder">
+              <img src="images/maps/key-design-3.png" alt="Description of image" style="height: 100%; width: 100%; object-fit: contain; display: block;">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    <div class="process-stage">
+      <h3 class="stage-title">🤖 AI-Integrated Features</h3>
+      <br>
+      <p class="stage-body">Manually tracking VP points and compiling reports across teachers, directors, and HQ was time consuming and error prone. Working with the Anthropic API (Claude) as the backend intelligence layer, AI-powered features were designed into each role's dashboard to automate analysis and surface insight at the level each user actually needed it.</p>
+      <br>
+      <br>
+      <div class="process-stage-grid">
+        <div>
+          <p class="body-label-text">Teachers</p>
+          <br>
+          <p class="stage-body">&bull; <strong>Automated data analysis dashboard</strong> — Claude processes each teacher's monthly VP point logs and student rosters, then auto-generates a summary view of total students taught, VP points earned per student, and month over month trends, removing the need to manually tally records</p>
+          <br>
+          <p class="stage-body">&bull; <strong>Document automation</strong> — Claude drafts the monthly progress report per student, combining VP point history with a narrative summary, for the teacher to review and send instead of writing each one from scratch</p>
+          <br>
+          <br>
+          <p class="body-label-text">Director</p>
+          <br>
+          <p class="stage-body">&bull; <strong>Automated data analysis dashboard</strong> — Claude rolls up VP point data across all teachers at the branch level, showing which teachers taught the most students, which classes are trending up or down in VP performance, and flagging outliers</p>
+          <br>
+          <p class="stage-body">&bull; <strong>Predictive analytics</strong> — Claude forecasts branch level performance trends, such as projected VP point averages for the coming month or students likely to drop below target, so the Director can intervene before problems compound</p>
+          <br>
+          <p class="stage-body">&bull; <strong>Personalized UX</strong> — The Director's dashboard surfaces different priority alerts than a teacher's, focused on staffing gaps and underperforming cohorts, tailored to a management level view rather than a single classroom view</p>
+          <br>
+          <br>
+          <p class="body-label-text">HQ Operations</p>
+          <br>
+          <p class="stage-body">&bull; <strong>Automated data analysis dashboard</strong> — Claude aggregates VP point and teacher load data across all branches, producing a network wide performance view including branch rankings, teacher utilization, and VP point distribution</p>
+          <br>
+          <p class="stage-body">&bull; <strong>Predictive analytics</strong> — Claude models cross branch trends, identifying which branches or teacher cohorts are likely to underperform next quarter, to inform HQ resource allocation and training decisions</p>
+          <br>
+          <p class="stage-body">&bull; <strong>Document automation</strong> — Claude auto-generates HQ level summary reports, such as quarterly performance decks and branch comparison memos, pulled directly from the aggregated VP data</p>
+          <br>
+        </div>
+
+        <div>
+          <div class="img-placeholder">
+            <img src="images/maps/ai-integration-2.png" alt="Description of image" style="height: 100%; width: 100%; object-fit: contain; display: block;">
+          </div>
+          <br>
+          <div class="img-placeholder">
+            <img src="images/maps/ai-integration-3.png" alt="Description of image" style="height: 100%; width: 100%; object-fit: contain; display: block;">
+          </div>
+          <br>
+          <div class="img-placeholder">
+            <img src="images/maps/ai-integration-4.png" alt="Description of image" style="height: 100%; width: 100%; object-fit: contain; display: block;">
+          </div>
+        </div>
+
       </div>
     </div>
 
